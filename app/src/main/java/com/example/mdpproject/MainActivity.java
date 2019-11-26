@@ -19,6 +19,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 
 public class MainActivity extends AppCompatActivity {
+    int a;
     SignInButton btnsignin;
     Button signout;
     int RC_SIGN_IN = 0;
