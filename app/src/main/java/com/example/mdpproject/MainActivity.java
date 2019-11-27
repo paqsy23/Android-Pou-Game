@@ -21,7 +21,7 @@ import com.google.android.gms.tasks.Task;
 public class MainActivity extends AppCompatActivity {
     int a;
     SignInButton btnsignin;
-    Button signout;
+//    Button signout;
     int RC_SIGN_IN = 0;
     GoogleSignInClient mGoogleSignInClient;
     String TAG = "ERROR";
@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         btnsignin = findViewById(R.id.sign_in_button);
-        signout = findViewById(R.id.btnsignout);
+//        signout = findViewById(R.id.btnsignout);
         btnsignin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -39,12 +39,12 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-        signout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                signOut();
-            }
-        });
+//        signout.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                signOut();
+//            }
+//        });
 
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestEmail()
