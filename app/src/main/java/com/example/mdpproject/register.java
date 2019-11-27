@@ -21,7 +21,7 @@ public class register extends AppCompatActivity {
         btnregis.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //register
+
             }
         });
         btntologin = findViewById(R.id.btntologin);
