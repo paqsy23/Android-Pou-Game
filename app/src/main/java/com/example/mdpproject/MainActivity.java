@@ -21,7 +21,6 @@ import com.google.android.gms.tasks.Task;
 public class MainActivity extends AppCompatActivity {
     int a;
     SignInButton btnsignin;
-//    Button signout;
     int RC_SIGN_IN = 0;
     GoogleSignInClient mGoogleSignInClient;
     String TAG = "ERROR";
@@ -39,12 +38,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-//        signout.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                signOut();
-//            }
-//        });
+
 
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestEmail()
@@ -56,15 +50,7 @@ public class MainActivity extends AppCompatActivity {
         Intent signInIntent = mGoogleSignInClient.getSignInIntent();
         startActivityForResult(signInIntent, RC_SIGN_IN);
     }
-    private void signOut() {
-        mGoogleSignInClient.signOut()
-                .addOnCompleteListener(this, new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                        // ...
-                    }
-                });
-    }
+
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -81,7 +67,8 @@ public class MainActivity extends AppCompatActivity {
     private void handleSignInResult(Task<GoogleSignInAccount> completedTask) {
         try {
             GoogleSignInAccount account = completedTask.getResult(ApiException.class);
-
+            Intent t = new Intent(MainActivity.this,home.class);
+            startActivity(t);
             // Signed in successfully, show authenticated UI.
 //            updateUI(account);
         } catch (ApiException e) {
