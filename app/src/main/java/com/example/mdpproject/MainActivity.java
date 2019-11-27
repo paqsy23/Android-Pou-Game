@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
@@ -24,12 +26,25 @@ public class MainActivity extends AppCompatActivity {
     int RC_SIGN_IN = 0;
     GoogleSignInClient mGoogleSignInClient;
     String TAG = "ERROR";
+    EditText edusername,edpassword;
+    Button btnlogin;
+    TextView tvregister;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        edusername = findViewById(R.id.edemail);
+        edpassword = findViewById(R.id.edpass);
+        btnlogin = findViewById(R.id.btnlogin);
+        tvregister = findViewById(R.id.tvregister);
+        tvregister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent t = new Intent(MainActivity.this,register.class);
+                startActivity(t);
+            }
+        });
         btnsignin = findViewById(R.id.sign_in_button);
-//        signout = findViewById(R.id.btnsignout);
         btnsignin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
