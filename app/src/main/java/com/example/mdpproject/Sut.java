@@ -13,6 +13,8 @@ import android.widget.Toast;
 import java.util.Random;
 
 public class Sut extends AppCompatActivity {
+
+    //demi push
     ImageView imgMusuh,imgPlayer,btnGunting,btnBatu,btnKertas;
     Button btnExit;
     TextView tvScore;
