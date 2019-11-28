@@ -15,7 +15,6 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 
 public class home extends AppCompatActivity {
-
     Button signout;
     GoogleSignInClient mGoogleSignInClient;
     @Override
