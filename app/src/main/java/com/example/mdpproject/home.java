@@ -21,15 +21,15 @@ public class home extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        signout = findViewById(R.id.btnsignout);
-        signout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                signOut();
-                Intent t = new Intent(home.this,MainActivity.class);
-                startActivity(t);
-            }
-        });
+//        signout = findViewById(R.id.btnsignout);
+//        signout.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                signOut();
+//                Intent t = new Intent(home.this,MainActivity.class);
+//                startActivity(t);
+//            }
+//        });
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestEmail()
                 .build();
