@@ -58,7 +58,7 @@ public class register extends AppCompatActivity {
         db = new SQLHandler(getApplicationContext());
     }
     private void registerUser(final String mail, final String pass, final String username){
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://10.10.2.2:80/android_login_api/", new Response.Listener<String>() {
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://10.0.3.2/myservice/master.php", new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 try {

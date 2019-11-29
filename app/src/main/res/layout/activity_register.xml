@@ -13,10 +13,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="17dp"
         android:ems="10"
-        android:hint="@android:string/defaultVoiceMailAlphaTag"
+        android:hint="EMAIL  "
         android:inputType="textPersonName"
         android:textAlignment="center"
-        android:textColorHint="@color/common_google_signin_btn_text_light_focused"
+        android:textColorHint="@color/common_google_signin_btn_text_light_disabled"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
@@ -30,7 +30,7 @@
         android:hint="PASSWORD"
         android:inputType="textPassword"
         android:textAlignment="center"
-        android:textColorHint="@color/common_google_signin_btn_text_light_focused"
+        android:textColorHint="@color/common_google_signin_btn_text_dark_disabled"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edemail_register" />
@@ -81,6 +81,7 @@
         android:hint="USERNAME"
         android:inputType="textPassword"
         android:textAlignment="center"
+        android:textColorHint="@color/common_google_signin_btn_text_dark_disabled"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edpassword_register" />
