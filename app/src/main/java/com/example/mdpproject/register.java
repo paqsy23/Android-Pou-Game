@@ -7,21 +7,44 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
+
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+import com.example.mdpproject.sql.SQLHandler;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class register extends AppCompatActivity {
-    EditText eduser,edpass;
+    EditText edemail,edpass,edusername;
     Button btnregis,btntologin;
+    SQLHandler db;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-        eduser = findViewById(R.id.edusername_register);
+        edemail = findViewById(R.id.edemail_register);
         edpass = findViewById(R.id.edpassword_register);
+        edusername = findViewById(R.id.edusername_register);
         btnregis = findViewById(R.id.btnregister);
         btnregis.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //register
+                String mail = edemail.getText().toString();
+                String pass = edpass.getText().toString();
+                String username = edusername.getText().toString();
+                if(!mail.isEmpty() && !pass.isEmpty() && !username.isEmpty()){
+                    registerUser(mail,pass,username);
+                }else{
+                    Toast.makeText(register.this, "pastikan semua field terisi", Toast.LENGTH_SHORT).show();
+                }
             }
         });
         btntologin = findViewById(R.id.btntologin);
@@ -32,6 +55,49 @@ public class register extends AppCompatActivity {
                 startActivity(t);
             }
         });
+        db = new SQLHandler(getApplicationContext());
+    }
+    private void registerUser(final String mail, final String pass, final String username){
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://10.10.2.2:80/android_login_api/", new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                try {
+                    JSONObject job = new JSONObject((response));
+                    boolean error= job.getBoolean("ERROR");
+                    if(!error){
+                        String uid = job.getString("uid");
+                        JSONObject user = job.getJSONObject("user");
+                        String email = user.getString("email");
+                        String pass = user.getString("password");
+                        String username = user.getString("username");
+                        db.adduser(email,pass,username,1);
+                    }
+                    else{
+                        Toast.makeText(register.this, "ERROR", Toast.LENGTH_SHORT).show();
+                    }
 
+                }catch(JSONException ex)
+                {
+                    ex.printStackTrace();
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                    Toast.makeText(register.this, error.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        }){
+            @Override
+            protected Map<String,String> getParams(){
+                Map<String,String> params = new HashMap<String,String>();
+                params.put("tag","register");
+                params.put("email",mail);
+                params.put("username",username);
+                params.put("password",pass);
+
+                return params;
+            }
+        };
+        Volley.newRequestQueue(getApplicationContext()).add(stringRequest);
     }
 }

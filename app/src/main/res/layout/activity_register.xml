@@ -8,12 +8,12 @@
     tools:context=".register">
 
     <EditText
-        android:id="@+id/edusername_register"
+        android:id="@+id/edemail_register"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="17dp"
         android:ems="10"
-        android:hint="EMAIL/USERNAME"
+        android:hint="@android:string/defaultVoiceMailAlphaTag"
         android:inputType="textPersonName"
         android:textAlignment="center"
         android:textColorHint="@color/common_google_signin_btn_text_light_focused"
@@ -33,7 +33,7 @@
         android:textColorHint="@color/common_google_signin_btn_text_light_focused"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edusername_register" />
+        app:layout_constraintTop_toBottomOf="@+id/edemail_register" />
 
     <TextView
         android:id="@+id/textView2"
@@ -53,12 +53,13 @@
         android:id="@+id/btnregister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="13dp"
+        android:layout_marginTop="18dp"
         android:background="@android:color/holo_blue_dark"
         android:text="REGISTER"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edpassword_register" />
+        app:layout_constraintTop_toBottomOf="@+id/edusername_register" />
 
     <Button
         android:id="@+id/btntologin"
@@ -70,4 +71,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnregister" />
+
+    <EditText
+        android:id="@+id/edusername_register"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="13dp"
+        android:ems="10"
+        android:hint="USERNAME"
+        android:inputType="textPassword"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edpassword_register" />
 </androidx.constraintlayout.widget.ConstraintLayout>
