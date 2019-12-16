@@ -153,21 +153,28 @@
                 android:layout_alignParentStart="true"
                 android:src="@drawable/energy" />
 
-            <ImageView
-                android:id="@+id/imageFullness"
-                android:layout_width="wrap_content"
+            <RelativeLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_toStartOf="@id/imageFun"
-                android:layout_toEndOf="@id/imageEnergy"
-                android:src="@drawable/fullness" />
-
-            <ImageView
-                android:id="@+id/imageFun"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="12dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
                 android:layout_toStartOf="@id/imageHealth"
-                android:src="@drawable/fun" />
+                android:layout_toEndOf="@id/imageEnergy">
+
+                <ImageView
+                    android:id="@+id/imageFullness"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:src="@drawable/fullness" />
+
+                <ImageView
+                    android:id="@+id/imageFun"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/fun" />
+            </RelativeLayout>
 
             <ImageView
                 android:id="@+id/imageHealth"
