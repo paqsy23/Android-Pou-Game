@@ -65,7 +65,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:fontFamily="sans-serif"
-                android:text="Kitchen"
+                android:text="Lab"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                 android:textColor="@android:color/white"
                 android:textSize="26sp"
@@ -196,14 +196,14 @@
         android:orientation="horizontal">
 
         <ImageView
-            android:id="@+id/imageFridge"
+            android:id="@+id/imageShelf"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
-            android:src="@drawable/fridge" />
+            android:src="@drawable/shelf" />
 
         <ImageView
             android:id="@+id/imageShop"
@@ -222,31 +222,32 @@
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:layout_toStartOf="@id/imageShop"
-            android:layout_toEndOf="@id/imageFridge">
+            android:layout_toEndOf="@id/imageShelf">
 
             <ImageView
-                android:id="@+id/imagePrevFood"
+                android:id="@+id/imagePrevPotion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
                 android:src="@drawable/prev" />
 
             <ImageView
-                android:id="@+id/imageFood"
+                android:id="@+id/imageNextPotion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_toStartOf="@id/imageNextFood"
-                android:layout_toEndOf="@id/imagePrevFood"
-                android:src="@drawable/burger" />
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:src="@drawable/next" />
 
             <ImageView
-                android:id="@+id/imageNextFood"
+                android:id="@+id/imagePotion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:src="@drawable/next" />
+                android:layout_toStartOf="@id/imageNextPotion"
+                android:layout_toEndOf="@id/imagePrevPotion"
+                android:src="@drawable/potionHealthSmall" />
+
         </RelativeLayout>
     </RelativeLayout>
 
