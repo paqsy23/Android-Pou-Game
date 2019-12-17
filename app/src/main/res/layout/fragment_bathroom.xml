@@ -203,7 +203,8 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
-            android:src="@drawable/showerWhite" />
+            android:src="@drawable/showerWhite"
+            app:srcCompat="@drawable/shower" />
 
         <ImageView
             android:id="@+id/imageShop"
@@ -220,7 +221,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:src="@drawable/soapWhite" />
+            android:src="@drawable/soapWhite"
+            app:srcCompat="@drawable/soap" />
 
     </RelativeLayout>
 

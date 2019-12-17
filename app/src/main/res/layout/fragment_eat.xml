@@ -238,7 +238,8 @@
                 android:layout_height="wrap_content"
                 android:layout_toStartOf="@id/imageNextFood"
                 android:layout_toEndOf="@id/imagePrevFood"
-                android:src="@drawable/burger" />
+                android:src="@drawable/food"
+                tools:srcCompat="@drawable/food" />
 
             <ImageView
                 android:id="@+id/imageNextFood"

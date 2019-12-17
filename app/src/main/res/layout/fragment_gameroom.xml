@@ -210,7 +210,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:src="@drawable/ballWhite" />
+            android:src="@drawable/ball"
+            app:srcCompat="@drawable/ball" />
 
         <ImageView
             android:id="@+id/imageShop"

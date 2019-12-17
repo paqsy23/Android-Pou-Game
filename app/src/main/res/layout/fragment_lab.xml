@@ -246,7 +246,8 @@
                 android:layout_height="wrap_content"
                 android:layout_toStartOf="@id/imageNextPotion"
                 android:layout_toEndOf="@id/imagePrevPotion"
-                android:src="@drawable/potionHealthSmall" />
+                android:src="@drawable/potion"
+                tools:srcCompat="@drawable/potion" />
 
         </RelativeLayout>
     </RelativeLayout>
