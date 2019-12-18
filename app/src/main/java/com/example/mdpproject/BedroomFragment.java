@@ -20,12 +20,13 @@ import android.widget.TextView;
 public class BedroomFragment extends Fragment {
     ImageView imgChar,imgCamera,imgHelp,imgPrev,imgNext,imgCoin,imgLvl,imgEnergy,imgFullness,imgFun,imgHealth,imgCloset,imgLamp,imgShop;
     TextView tvPlace,tvCoin,tvLvl;
+    View shade;
+
     public static user u;
 
     public BedroomFragment() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -45,12 +46,16 @@ public class BedroomFragment extends Fragment {
         imgLvl=view.findViewById(R.id.imageLevelBedroom);imgShop=view.findViewById(R.id.imageShopBedroom);
         tvPlace=view.findViewById(R.id.textView6);tvCoin=view.findViewById(R.id.tvCoinBedroom);tvLvl=view.findViewById(R.id.tvLevelBedroom);
 
+        shade=view.findViewById(R.id.shadeBedroom);
+
         u = new user(0,0,0,100,100,100,100,null);
 
         if(u.isLampStatus()==true){
             imgLamp.setImageResource(R.drawable.lamp_on);
+            //shade.setVisibility(View.INVISIBLE);
         }else{
             imgLamp.setImageResource(R.drawable.lamp_off);
+            //shade.setVisibility(View.VISIBLE);
         }
 
         imgLamp.setOnClickListener(new View.OnClickListener() {
@@ -58,10 +63,10 @@ public class BedroomFragment extends Fragment {
             public void onClick(View view) {
                 if(u.isLampStatus()==true){
                     u.setLampStatus(false);
-                    imgLamp.setImageResource(R.drawable.lamp_off);
+                    imgLamp.setImageResource(R.drawable.lamp_off);//shade.setVisibility(View.VISIBLE);
                 }else{
                     u.setLampStatus(true);
-                    imgLamp.setImageResource(R.drawable.lamp_on);
+                    imgLamp.setImageResource(R.drawable.lamp_on);//shade.setVisibility(View.INVISIBLE);
                 }
             }
         });
