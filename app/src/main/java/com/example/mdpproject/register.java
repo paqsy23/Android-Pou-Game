@@ -58,25 +58,27 @@ public class register extends AppCompatActivity {
         db = new SQLHandler(getApplicationContext());
     }
     private void registerUser(final String mail, final String pass, final String username){
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://10.0.3.2/myservice/master.php", new Response.Listener<String>() {
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://192.168.43.137/mdpproject/mdpproject.php", new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 try {
                     JSONObject job = new JSONObject((response));
-                    boolean error= job.getBoolean("ERROR");
-                    if(!error){
-                        String uid = job.getString("uid");
-                        JSONObject user = job.getJSONObject("user");
-                        String email = user.getString("email");
-                        String pass = user.getString("password");
-                        String username = user.getString("username");
-                        db.adduser(email,pass,username,1);
-                    }
-                    else{
-                        Toast.makeText(register.this, "ERROR", Toast.LENGTH_SHORT).show();
-                    }
+                    String msg= job.getString("Message");
+                    Toast.makeText(register.this, msg, Toast.LENGTH_SHORT).show();
+//                    if(!error){
+//                        String uid = job.getString("uid");
+//                        JSONObject user = job.getJSONObject("user");
+//                        String email = user.getString("email");
+//                        String pass = user.getString("password");
+//                        String username = user.getString("username");
+//                        db.adduser(email,pass,username,1);
+//                    }
+//                    else{
+//                        Toast.makeText(register.this, "ERROR", Toast.LENGTH_SHORT).show();
+//                    }
 
-                }catch(JSONException ex)
+                }
+                catch(JSONException ex)
                 {
                     ex.printStackTrace();
                 }
@@ -90,7 +92,7 @@ public class register extends AppCompatActivity {
             @Override
             protected Map<String,String> getParams(){
                 Map<String,String> params = new HashMap<String,String>();
-                params.put("tag","register");
+                params.put("function","c");
                 params.put("email",mail);
                 params.put("username",username);
                 params.put("password",pass);
