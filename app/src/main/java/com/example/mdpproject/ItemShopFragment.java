@@ -37,7 +37,7 @@ public class ItemShopFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        rv=view.findViewById(R.id.rvShop);
+        rv=view.findViewById(R.id.rvItemShop);
         adapter = new ItemAdapter(ShopFragment.listitem,HomeActivity.u);
 
         rv.setHasFixedSize(true);

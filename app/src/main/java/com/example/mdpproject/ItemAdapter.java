@@ -100,24 +100,24 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder>  {
                     imgItem.setImageResource(R.drawable.soap_red);
                 }
             }else if(i.getType().equals("Ball")){
-                if(i.getName().equals("ball_beach1")){
-                    imgItem.setImageResource(R.drawable.ball_beach1);
-                }
-                else if(i.getName().equals("ball_beach2")){
-                    imgItem.setImageResource(R.drawable.ball_beach2);
-                }else if(i.getName().equals("ball_beach3")){
-                    imgItem.setImageResource(R.drawable.ball_beach3);
-                }else if(i.getName().equals("ball_beach4")){
-                    imgItem.setImageResource(R.drawable.ball_beach4);
-                }else if(i.getName().equals("ball_beach5")){
-                    imgItem.setImageResource(R.drawable.ball_beach5);
-                }else if(i.getName().equals("ball_beach6")){
-                    imgItem.setImageResource(R.drawable.ball_beach6);
-                }else if(i.getName().equals("ball_beach7")){
-                    imgItem.setImageResource(R.drawable.ball_beach7);
-                }else if(i.getName().equals("ball_beach8")){
-                    imgItem.setImageResource(R.drawable.ball_beach8);
-                }
+//                if(i.getName().equals("ball_beach1")){
+//                    imgItem.setImageResource(R.drawable.ball_beach1);
+//                }
+//                else if(i.getName().equals("ball_beach2")){
+//                    imgItem.setImageResource(R.drawable.ball_beach2);
+//                }else if(i.getName().equals("ball_beach3")){
+//                    imgItem.setImageResource(R.drawable.ball_beach3);
+//                }else if(i.getName().equals("ball_beach4")){
+//                    imgItem.setImageResource(R.drawable.ball_beach4);
+//                }else if(i.getName().equals("ball_beach5")){
+//                    imgItem.setImageResource(R.drawable.ball_beach5);
+//                }else if(i.getName().equals("ball_beach6")){
+//                    imgItem.setImageResource(R.drawable.ball_beach6);
+//                }else if(i.getName().equals("ball_beach7")){
+//                    imgItem.setImageResource(R.drawable.ball_beach7);
+//                }else if(i.getName().equals("ball_beach8")){
+//                    imgItem.setImageResource(R.drawable.ball_beach8);
+//                }
             }
         }
     }

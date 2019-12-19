@@ -308,11 +308,7 @@ public class gm2 extends AppCompatActivity {
         if(ronde == 10){
             nama.add(ed.getText().toString());
             arrscore.add(score);
-            Intent t = new Intent(MainActivity.this,awal.class);
-            t.putExtra("bool",true);
-            t.putExtra("arrnama",nama);
-            t.putExtra("arrscore",arrscore);
-            startActivity(t);
+            //end game
         }
 
         tv.setText("Score : " +score);

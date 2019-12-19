@@ -46,7 +46,7 @@ public class BathroomFragment extends Fragment {
 
         tvCoin.setText(HomeActivity.u.getCoin()+"");tvLvl.setText(HomeActivity.u.getLvl()+"");
         if(HomeActivity.u.isAdult()){
-            imgChar.setImageResource(R.drawable.poubesar);
+//            imgChar.setImageResource(R.drawable.poubesar);
         }else{
             imgChar.setImageResource(R.drawable.poukecil);
         }
