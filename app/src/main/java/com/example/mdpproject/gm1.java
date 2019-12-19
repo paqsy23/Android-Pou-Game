@@ -30,7 +30,7 @@ public class gm1 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_gm1);
         ArrayList<Button> btn = new ArrayList<Button>();
         for (int i=0;i<3;i++){
             for (int j=0;j<5;j++){
