@@ -9,9 +9,15 @@
     android:foregroundTint="#00FFFFFF"
     android:foregroundTintMode="add"
     tools:context=".EatFragment">
+    <View
+        android:id="@+id/shadeBedroom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/primaryShadow"
+        android:visibility="invisible"/>
 
     <ImageView
-        android:id="@+id/imageChar"
+        android:id="@+id/imageCharBedroom"
         android:layout_width="150dip"
         android:layout_height="150dip"
         android:layout_centerInParent="true"
@@ -24,7 +30,7 @@
         android:layout_below="@id/topLayout">
 
         <ImageView
-            android:id="@+id/imageCamera"
+            android:id="@+id/imageCameraBedroom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
@@ -34,7 +40,7 @@
             android:src="@drawable/camera" />
 
         <ImageView
-            android:id="@+id/imageHelp"
+            android:id="@+id/imageHelpBedroom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
@@ -49,11 +55,11 @@
             android:layout_centerInParent="true"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
-            android:layout_toStartOf="@id/imageHelp"
-            android:layout_toEndOf="@id/imageCamera">
+            android:layout_toStartOf="@id/imageHelpBedroom"
+            android:layout_toEndOf="@id/imageCameraBedroom">
 
             <ImageView
-                android:id="@+id/imagePrev"
+                android:id="@+id/imagePrevBedroom"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
@@ -72,7 +78,7 @@
                 android:textStyle="bold" />
 
             <ImageView
-                android:id="@+id/imageNext"
+                android:id="@+id/imageNextBedroom"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
@@ -90,7 +96,7 @@
         android:orientation="horizontal">
 
         <ImageView
-            android:id="@+id/imageCoin"
+            android:id="@+id/imageCoinBedroom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
@@ -100,7 +106,7 @@
             android:src="@drawable/coin" />
 
         <ImageView
-            android:id="@+id/imageLevel"
+            android:id="@+id/imageLevelBedroom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
@@ -109,11 +115,11 @@
             android:src="@drawable/pou" />
 
         <TextView
-            android:id="@+id/tvCoin"
+            android:id="@+id/tvCoinBedroom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignStart="@id/imageCoin"
-            android:layout_alignBottom="@id/imageCoin"
+            android:layout_alignStart="@id/imageCoinBedroom"
+            android:layout_alignBottom="@id/imageCoinBedroom"
             android:layout_marginStart="14sp"
             android:layout_marginBottom="8dp"
             android:fontFamily="sans-serif-condensed-medium"
@@ -124,12 +130,12 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/tvLevel"
+            android:id="@+id/tvLevelBedroom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignStart="@id/imageLevel"
-            android:layout_alignEnd="@id/imageLevel"
-            android:layout_alignBottom="@id/imageLevel"
+            android:layout_alignStart="@id/imageLevelBedroom"
+            android:layout_alignEnd="@id/imageLevelBedroom"
+            android:layout_alignBottom="@id/imageLevelBedroom"
             android:text="1"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
@@ -143,11 +149,11 @@
             android:layout_centerInParent="true"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
-            android:layout_toStartOf="@id/imageLevel"
-            android:layout_toEndOf="@id/imageCoin">
+            android:layout_toStartOf="@id/imageLevelBedroom"
+            android:layout_toEndOf="@id/imageCoinBedroom">
 
             <ImageView
-                android:id="@+id/imageEnergy"
+                android:id="@+id/imageEnergyBedroom"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
@@ -158,18 +164,18 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
-                android:layout_toStartOf="@id/imageHealth"
-                android:layout_toEndOf="@id/imageEnergy">
+                android:layout_toStartOf="@id/imageHealthBedroom"
+                android:layout_toEndOf="@id/imageEnergyBedroom">
 
                 <ImageView
-                    android:id="@+id/imageFullness"
+                    android:id="@+id/imageFullnessBedroom"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
                     android:src="@drawable/fullness" />
 
                 <ImageView
-                    android:id="@+id/imageFun"
+                    android:id="@+id/imageFunBedroom"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
@@ -177,7 +183,7 @@
             </RelativeLayout>
 
             <ImageView
-                android:id="@+id/imageHealth"
+                android:id="@+id/imageHealthBedroom"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
@@ -196,7 +202,7 @@
         android:orientation="horizontal">
 
         <ImageView
-            android:id="@+id/imageCloset"
+            android:id="@+id/imageClosetBedroom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
@@ -206,14 +212,14 @@
             android:src="@drawable/closet" />
 
         <ImageView
-            android:id="@+id/imageLamp"
+            android:id="@+id/imageLampBedroom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:src="@drawable/lampOn" />
+            android:src="@drawable/lamp_on" />
 
         <ImageView
-            android:id="@+id/imageShop"
+            android:id="@+id/imageShopBedroom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"

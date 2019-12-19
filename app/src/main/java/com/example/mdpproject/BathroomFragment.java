@@ -13,16 +13,14 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-
 /**
  * A simple {@link Fragment} subclass.
  */
-public class EatFragment extends Fragment {
-
-    ImageView imgChar,imgCamera,imgHelp,imgPrev,imgNext,imgCoin,imgLvl,imgEnergy,imgFullness,imgFun,imgHealth,imgFridge,imgShop,imgPrevFood,imgNextFood,imgFood;
+public class BathroomFragment extends Fragment {
+    ImageView imgChar,imgCamera,imgHelp,imgPrev,imgNext,imgCoin,imgLvl,imgEnergy,imgFullness,imgFun,imgHealth,imgShower,imgSoap,imgShop;
     TextView tvPlace,tvCoin,tvLvl;
-
-    public EatFragment() {
+    user u;
+    public BathroomFragment() {
         // Required empty public constructor
     }
 
@@ -30,23 +28,21 @@ public class EatFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_eat, container, false);
+        return inflater.inflate(R.layout.fragment_bathroom, container, false);
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        imgChar=view.findViewById(R.id.imageCharEat);imgEnergy=view.findViewById(R.id.imageEnergyEat);
-        imgCamera=view.findViewById(R.id.imageCameraEat);imgFullness=view.findViewById(R.id.imageFullnessEat);
-        imgHelp=view.findViewById(R.id.imageHelpEat);imgFun=view.findViewById(R.id.imageFunEat);
-        imgPrev=view.findViewById(R.id.imagePrevEat);imgHealth=view.findViewById(R.id.imageHealthEat);
-        imgNext=view.findViewById(R.id.imageNextEat);imgFridge=view.findViewById(R.id.imageFridgeEat);
-        imgCoin=view.findViewById(R.id.imageCoinEat);imgNextFood=view.findViewById(R.id.imageNextFoodEat);
-        imgLvl=view.findViewById(R.id.imageLevelEat);imgShop=view.findViewById(R.id.imageShopEat);
-        imgPrevFood=view.findViewById(R.id.imagePrevFoodEat);imgFood=view.findViewById(R.id.imageFoodEat);
+        imgChar=view.findViewById(R.id.imageCharBathroom);imgEnergy=view.findViewById(R.id.imageEnergyBathroom);
+        imgCamera=view.findViewById(R.id.imageCameraBathroom);imgFullness=view.findViewById(R.id.imageFullnessBathroom);
+        imgHelp=view.findViewById(R.id.imageHelpBathroom);imgFun=view.findViewById(R.id.imageFunBathroom);
+        imgPrev=view.findViewById(R.id.imagePrevBathroom);imgHealth=view.findViewById(R.id.imageHealthBathroom);
+        imgNext=view.findViewById(R.id.imageNextBathroom);imgShower=view.findViewById(R.id.imageShowerBathroom);
+        imgCoin=view.findViewById(R.id.imageCoinBathroom);imgSoap=view.findViewById(R.id.imageSoapBathroom);
+        imgLvl=view.findViewById(R.id.imageLevelBathroom);imgShop=view.findViewById(R.id.imageShopBathroom);
 
-        tvPlace=view.findViewById(R.id.textView6);tvCoin=view.findViewById(R.id.tvCoinEat);tvLvl=view.findViewById(R.id.tvLevelEat);
+        tvPlace=view.findViewById(R.id.textView6);tvCoin=view.findViewById(R.id.tvCoinBathroom);tvLvl=view.findViewById(R.id.tvLevelBathroom);
 
         tvCoin.setText(BedroomFragment.u.getCoin()+"");tvLvl.setText(BedroomFragment.u.getLvl()+"");
 
@@ -92,10 +88,10 @@ public class EatFragment extends Fragment {
             getFragmentManager().beginTransaction().remove(this).commit();
             getFragmentManager().beginTransaction().replace(R.id.myFragment, new GameroomFragment()).addToBackStack(null).commit();
         }else if(angka>4){
-            angka=0;
+            HomeActivity.pages=0;
             gantiPage(HomeActivity.pages);
         }else if(angka<0){
-            angka=4;
+            HomeActivity.pages=4;
             gantiPage(HomeActivity.pages);
         }
     }

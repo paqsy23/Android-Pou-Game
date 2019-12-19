@@ -11,7 +11,7 @@
     tools:context=".EatFragment">
 
     <ImageView
-        android:id="@+id/imageChar"
+        android:id="@+id/imageCharGame"
         android:layout_width="150dip"
         android:layout_height="150dip"
         android:layout_centerInParent="true"
@@ -24,7 +24,7 @@
         android:layout_below="@id/topLayout">
 
         <ImageView
-            android:id="@+id/imageCamera"
+            android:id="@+id/imageCameraGame"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
@@ -34,7 +34,7 @@
             android:src="@drawable/camera" />
 
         <ImageView
-            android:id="@+id/imageHelp"
+            android:id="@+id/imageHelpGame"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
@@ -49,11 +49,11 @@
             android:layout_centerInParent="true"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
-            android:layout_toStartOf="@id/imageHelp"
-            android:layout_toEndOf="@id/imageCamera">
+            android:layout_toStartOf="@id/imageHelpGame"
+            android:layout_toEndOf="@id/imageCameraGame">
 
             <ImageView
-                android:id="@+id/imagePrev"
+                android:id="@+id/imagePrevGame"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
@@ -72,7 +72,7 @@
                 android:textStyle="bold" />
 
             <ImageView
-                android:id="@+id/imageNext"
+                android:id="@+id/imageNextGame"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
@@ -90,7 +90,7 @@
         android:orientation="horizontal">
 
         <ImageView
-            android:id="@+id/imageCoin"
+            android:id="@+id/imageCoinGame"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
@@ -100,7 +100,7 @@
             android:src="@drawable/coin" />
 
         <ImageView
-            android:id="@+id/imageLevel"
+            android:id="@+id/imageLevelGame"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
@@ -109,11 +109,11 @@
             android:src="@drawable/pou" />
 
         <TextView
-            android:id="@+id/tvCoin"
+            android:id="@+id/tvCoinGame"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignStart="@id/imageCoin"
-            android:layout_alignBottom="@id/imageCoin"
+            android:layout_alignStart="@id/imageCoinGame"
+            android:layout_alignBottom="@id/imageCoinGame"
             android:layout_marginStart="14sp"
             android:layout_marginBottom="8dp"
             android:fontFamily="sans-serif-condensed-medium"
@@ -124,12 +124,12 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/tvLevel"
+            android:id="@+id/tvLevelGame"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignStart="@id/imageLevel"
-            android:layout_alignEnd="@id/imageLevel"
-            android:layout_alignBottom="@id/imageLevel"
+            android:layout_alignStart="@id/imageLevelGame"
+            android:layout_alignEnd="@id/imageLevelGame"
+            android:layout_alignBottom="@id/imageLevelGame"
             android:text="1"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
@@ -143,11 +143,11 @@
             android:layout_centerInParent="true"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
-            android:layout_toStartOf="@id/imageLevel"
-            android:layout_toEndOf="@id/imageCoin">
+            android:layout_toStartOf="@id/imageLevelGame"
+            android:layout_toEndOf="@id/imageCoinGame">
 
             <ImageView
-                android:id="@+id/imageEnergy"
+                android:id="@+id/imageEnergyGame"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
@@ -158,18 +158,18 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
-                android:layout_toStartOf="@id/imageHealth"
-                android:layout_toEndOf="@id/imageEnergy">
+                android:layout_toStartOf="@id/imageHealthGame"
+                android:layout_toEndOf="@id/imageEnergyGame">
 
                 <ImageView
-                    android:id="@+id/imageFullness"
+                    android:id="@+id/imageFullnessGame"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
                     android:src="@drawable/fullness" />
 
                 <ImageView
-                    android:id="@+id/imageFun"
+                    android:id="@+id/imageFunGame"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
@@ -177,7 +177,7 @@
             </RelativeLayout>
 
             <ImageView
-                android:id="@+id/imageHealth"
+                android:id="@+id/imageHealthGame"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
@@ -196,7 +196,7 @@
         android:orientation="horizontal">
 
         <ImageView
-            android:id="@+id/imageJoystick"
+            android:id="@+id/imageJoystickGame"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
@@ -206,7 +206,7 @@
             android:src="@drawable/joystick" />
 
         <ImageView
-            android:id="@+id/imageBall"
+            android:id="@+id/imageBallGame"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
@@ -214,7 +214,7 @@
             app:srcCompat="@drawable/ball" />
 
         <ImageView
-            android:id="@+id/imageShop"
+            android:id="@+id/imageShopGame"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"

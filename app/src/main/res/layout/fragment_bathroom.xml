@@ -11,7 +11,7 @@
     tools:context=".EatFragment">
 
     <ImageView
-        android:id="@+id/imageChar"
+        android:id="@+id/imageCharBathroom"
         android:layout_width="150dip"
         android:layout_height="150dip"
         android:layout_centerInParent="true"
@@ -24,7 +24,7 @@
         android:layout_below="@id/topLayout">
 
         <ImageView
-            android:id="@+id/imageCamera"
+            android:id="@+id/imageCameraBathroom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
@@ -34,7 +34,7 @@
             android:src="@drawable/camera" />
 
         <ImageView
-            android:id="@+id/imageHelp"
+            android:id="@+id/imageHelpBathroom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
@@ -49,11 +49,11 @@
             android:layout_centerInParent="true"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
-            android:layout_toStartOf="@id/imageHelp"
-            android:layout_toEndOf="@id/imageCamera">
+            android:layout_toStartOf="@id/imageHelpBathroom"
+            android:layout_toEndOf="@id/imageCameraBathroom">
 
             <ImageView
-                android:id="@+id/imagePrev"
+                android:id="@+id/imagePrevBathroom"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
@@ -72,7 +72,7 @@
                 android:textStyle="bold" />
 
             <ImageView
-                android:id="@+id/imageNext"
+                android:id="@+id/imageNextBathroom"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
@@ -90,7 +90,7 @@
         android:orientation="horizontal">
 
         <ImageView
-            android:id="@+id/imageCoin"
+            android:id="@+id/imageCoinBathroom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
@@ -100,7 +100,7 @@
             android:src="@drawable/coin" />
 
         <ImageView
-            android:id="@+id/imageLevel"
+            android:id="@+id/imageLevelBathroom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
@@ -109,11 +109,11 @@
             android:src="@drawable/pou" />
 
         <TextView
-            android:id="@+id/tvCoin"
+            android:id="@+id/tvCoinBathroom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignStart="@id/imageCoin"
-            android:layout_alignBottom="@id/imageCoin"
+            android:layout_alignStart="@id/imageCoinBathroom"
+            android:layout_alignBottom="@id/imageCoinBathroom"
             android:layout_marginStart="14sp"
             android:layout_marginBottom="8dp"
             android:fontFamily="sans-serif-condensed-medium"
@@ -124,12 +124,12 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/tvLevel"
+            android:id="@+id/tvLevelBathroom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignStart="@id/imageLevel"
-            android:layout_alignEnd="@id/imageLevel"
-            android:layout_alignBottom="@id/imageLevel"
+            android:layout_alignStart="@id/imageLevelBathroom"
+            android:layout_alignEnd="@id/imageLevelBathroom"
+            android:layout_alignBottom="@id/imageLevelBathroom"
             android:text="1"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
@@ -143,11 +143,11 @@
             android:layout_centerInParent="true"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
-            android:layout_toStartOf="@id/imageLevel"
-            android:layout_toEndOf="@id/imageCoin">
+            android:layout_toStartOf="@id/imageLevelBathroom"
+            android:layout_toEndOf="@id/imageCoinBathroom">
 
             <ImageView
-                android:id="@+id/imageEnergy"
+                android:id="@+id/imageEnergyBathroom"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
@@ -158,18 +158,18 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
-                android:layout_toStartOf="@id/imageHealth"
-                android:layout_toEndOf="@id/imageEnergy">
+                android:layout_toStartOf="@id/imageHealthBathroom"
+                android:layout_toEndOf="@id/imageEnergyBathroom">
 
                 <ImageView
-                    android:id="@+id/imageFullness"
+                    android:id="@+id/imageFullnessBathroom"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
                     android:src="@drawable/fullness" />
 
                 <ImageView
-                    android:id="@+id/imageFun"
+                    android:id="@+id/imageFunBathroom"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
@@ -177,7 +177,7 @@
             </RelativeLayout>
 
             <ImageView
-                android:id="@+id/imageHealth"
+                android:id="@+id/imageHealthBathroom"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
@@ -196,18 +196,18 @@
         android:orientation="horizontal">
 
         <ImageView
-            android:id="@+id/imageShower"
+            android:id="@+id/imageShowerBathroom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
-            android:src="@drawable/showerWhite"
+            android:src="@drawable/shower_white"
             app:srcCompat="@drawable/shower" />
 
         <ImageView
-            android:id="@+id/imageShop"
+            android:id="@+id/imageShopBathroom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
@@ -217,11 +217,11 @@
             android:src="@drawable/shop" />
 
         <ImageView
-            android:id="@+id/imageSoap"
+            android:id="@+id/imageSoapBathroom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:src="@drawable/soapWhite"
+            android:src="@drawable/soap_white"
             app:srcCompat="@drawable/soap" />
 
     </RelativeLayout>

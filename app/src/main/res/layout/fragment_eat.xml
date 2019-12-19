@@ -11,7 +11,7 @@
     tools:context=".EatFragment">
 
     <ImageView
-        android:id="@+id/imageChar"
+        android:id="@+id/imageCharEat"
         android:layout_width="150dip"
         android:layout_height="150dip"
         android:layout_centerInParent="true"
@@ -24,7 +24,7 @@
         android:layout_below="@id/topLayout">
 
         <ImageView
-            android:id="@+id/imageCamera"
+            android:id="@+id/imageCameraEat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
@@ -34,7 +34,7 @@
             android:src="@drawable/camera" />
 
         <ImageView
-            android:id="@+id/imageHelp"
+            android:id="@+id/imageHelpEat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
@@ -49,11 +49,11 @@
             android:layout_centerInParent="true"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
-            android:layout_toStartOf="@id/imageHelp"
-            android:layout_toEndOf="@id/imageCamera">
+            android:layout_toStartOf="@id/imageHelpEat"
+            android:layout_toEndOf="@id/imageCameraEat">
 
             <ImageView
-                android:id="@+id/imagePrev"
+                android:id="@+id/imagePrevEat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
@@ -72,7 +72,7 @@
                 android:textStyle="bold" />
 
             <ImageView
-                android:id="@+id/imageNext"
+                android:id="@+id/imageNextEat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
@@ -90,7 +90,7 @@
         android:orientation="horizontal">
 
         <ImageView
-            android:id="@+id/imageCoin"
+            android:id="@+id/imageCoinEat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
@@ -100,7 +100,7 @@
             android:src="@drawable/coin" />
 
         <ImageView
-            android:id="@+id/imageLevel"
+            android:id="@+id/imageLevelEat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
@@ -109,11 +109,11 @@
             android:src="@drawable/pou" />
 
         <TextView
-            android:id="@+id/tvCoin"
+            android:id="@+id/tvCoinEat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignStart="@id/imageCoin"
-            android:layout_alignBottom="@id/imageCoin"
+            android:layout_alignStart="@id/imageCoinEat"
+            android:layout_alignBottom="@id/imageCoinEat"
             android:layout_marginStart="14sp"
             android:layout_marginBottom="8dp"
             android:fontFamily="sans-serif-condensed-medium"
@@ -124,12 +124,12 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/tvLevel"
+            android:id="@+id/tvLevelEat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignStart="@id/imageLevel"
-            android:layout_alignEnd="@id/imageLevel"
-            android:layout_alignBottom="@id/imageLevel"
+            android:layout_alignStart="@id/imageLevelEat"
+            android:layout_alignEnd="@id/imageLevelEat"
+            android:layout_alignBottom="@id/imageLevelEat"
             android:text="1"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
@@ -143,11 +143,11 @@
             android:layout_centerInParent="true"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
-            android:layout_toStartOf="@id/imageLevel"
-            android:layout_toEndOf="@id/imageCoin">
+            android:layout_toStartOf="@id/imageLevelEat"
+            android:layout_toEndOf="@id/imageCoinEat">
 
             <ImageView
-                android:id="@+id/imageEnergy"
+                android:id="@+id/imageEnergyEat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
@@ -158,18 +158,18 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
-                android:layout_toStartOf="@id/imageHealth"
-                android:layout_toEndOf="@id/imageEnergy">
+                android:layout_toStartOf="@id/imageHealthEat"
+                android:layout_toEndOf="@id/imageEnergyEat">
 
                 <ImageView
-                    android:id="@+id/imageFullness"
+                    android:id="@+id/imageFullnessEat"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
                     android:src="@drawable/fullness" />
 
                 <ImageView
-                    android:id="@+id/imageFun"
+                    android:id="@+id/imageFunEat"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
@@ -177,7 +177,7 @@
             </RelativeLayout>
 
             <ImageView
-                android:id="@+id/imageHealth"
+                android:id="@+id/imageHealthEat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
@@ -196,7 +196,7 @@
         android:orientation="horizontal">
 
         <ImageView
-            android:id="@+id/imageFridge"
+            android:id="@+id/imageFridgeEat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
@@ -206,7 +206,7 @@
             android:src="@drawable/fridge" />
 
         <ImageView
-            android:id="@+id/imageShop"
+            android:id="@+id/imageShopEat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
@@ -221,11 +221,11 @@
             android:layout_centerInParent="true"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
-            android:layout_toStartOf="@id/imageShop"
-            android:layout_toEndOf="@id/imageFridge">
+            android:layout_toStartOf="@id/imageShopEat"
+            android:layout_toEndOf="@id/imageFridgeEat">
 
             <ImageView
-                android:id="@+id/imagePrevFood"
+                android:id="@+id/imagePrevFoodEat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
@@ -233,16 +233,16 @@
                 android:src="@drawable/prev" />
 
             <ImageView
-                android:id="@+id/imageFood"
+                android:id="@+id/imageFoodEat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_toStartOf="@id/imageNextFood"
-                android:layout_toEndOf="@id/imagePrevFood"
+                android:layout_toStartOf="@id/imageNextFoodEat"
+                android:layout_toEndOf="@id/imagePrevFoodEat"
                 android:src="@drawable/food"
                 tools:srcCompat="@drawable/food" />
 
             <ImageView
-                android:id="@+id/imageNextFood"
+                android:id="@+id/imageNextFoodEat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
