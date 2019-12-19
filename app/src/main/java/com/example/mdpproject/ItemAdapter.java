@@ -3,6 +3,7 @@ package com.example.mdpproject;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -23,7 +24,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder>  {
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.rv_item,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.rv_item_shop,parent,false);
         ItemAdapter.ViewHolder holder=new ItemAdapter.ViewHolder(view);
         return holder;
     }
@@ -41,17 +42,21 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder>  {
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         ImageView imgItem;
-        TextView tvJumlah;
+        TextView tvItemName,tvItemPrice;
+        Button btnBuy;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             imgItem=itemView.findViewById(R.id.imageItem);
-            tvJumlah=itemView.findViewById(R.id.tvJumlah);
+            tvItemName=itemView.findViewById(R.id.tvItemName);
+            tvItemPrice=itemView.findViewById(R.id.tvPrice);
         }
 
         void bind(item i){
             if(i.getType().equals("Food")){
                 if(i.getName().equals("food_bacon")){
                     imgItem.setImageResource(R.drawable.food_bacon);
+                    tvItemName.setText(i.getName());
+                    tvItemPrice.setText(i.getPrice());
                 }else if(i.getName().equals("food_bread_chocolate")){
                     imgItem.setImageResource(R.drawable.food_bread_chocolate);
                 }else if(i.getName().equals("food_cereal_chocolate")){
