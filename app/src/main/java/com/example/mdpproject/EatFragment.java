@@ -48,7 +48,7 @@ public class EatFragment extends Fragment {
 
         tvPlace=view.findViewById(R.id.textView6);tvCoin=view.findViewById(R.id.tvCoinEat);tvLvl=view.findViewById(R.id.tvLevelEat);
 
-        tvCoin.setText(BedroomFragment.u.getCoin()+"");tvLvl.setText(BedroomFragment.u.getLvl()+"");
+        tvCoin.setText(HomeActivity.u.getCoin()+"");tvLvl.setText(HomeActivity.u.getLvl()+"");
 
         imgPrev.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -44,7 +44,7 @@ public class BathroomFragment extends Fragment {
 
         tvPlace=view.findViewById(R.id.textView6);tvCoin=view.findViewById(R.id.tvCoinBathroom);tvLvl=view.findViewById(R.id.tvLevelBathroom);
 
-        tvCoin.setText(BedroomFragment.u.getCoin()+"");tvLvl.setText(BedroomFragment.u.getLvl()+"");
+        tvCoin.setText(HomeActivity.u.getCoin()+"");tvLvl.setText(HomeActivity.u.getLvl()+"");
 
         imgPrev.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -9,11 +9,12 @@ import android.os.Bundle;
 public class HomeActivity extends AppCompatActivity {
     Fragment fragment;
     public static int pages=0;
+    public static user u;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home2);
-
+        u = new user(0,0,0,100,100,100,100,null);
         fragment = new BedroomFragment();
         openFragment(fragment);
 

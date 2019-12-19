@@ -22,8 +22,6 @@ public class BedroomFragment extends Fragment {
     TextView tvPlace,tvCoin,tvLvl;
     View shade;
 
-    public static user u;
-
     public BedroomFragment() {
         // Required empty public constructor
     }
@@ -48,9 +46,7 @@ public class BedroomFragment extends Fragment {
 
         shade=view.findViewById(R.id.shadeBedroom);
 
-        u = new user(0,0,0,100,100,100,100,null);
-
-        if(u.isLampStatus()==true){
+        if(HomeActivity.u.isLampStatus()==true){
             imgLamp.setImageResource(R.drawable.lamp_on);
             //shade.setVisibility(View.INVISIBLE);
         }else{
@@ -61,17 +57,17 @@ public class BedroomFragment extends Fragment {
         imgLamp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(u.isLampStatus()==true){
-                    u.setLampStatus(false);
+                if(HomeActivity.u.isLampStatus()==true){
+                    HomeActivity.u.setLampStatus(false);
                     imgLamp.setImageResource(R.drawable.lamp_off);//shade.setVisibility(View.VISIBLE);
                 }else{
-                    u.setLampStatus(true);
+                    HomeActivity.u.setLampStatus(true);
                     imgLamp.setImageResource(R.drawable.lamp_on);//shade.setVisibility(View.INVISIBLE);
                 }
             }
         });
 
-        tvCoin.setText(u.getCoin()+"");tvLvl.setText(u.getLvl()+"");
+        tvCoin.setText(HomeActivity.u.getCoin()+"");tvLvl.setText(HomeActivity.u.getLvl()+"");
 
         imgPrev.setOnClickListener(new View.OnClickListener() {
             @Override
