@@ -44,8 +44,11 @@ public class BedroomFragment extends Fragment {
         imgLvl=view.findViewById(R.id.imageLevelBedroom);imgShop=view.findViewById(R.id.imageShopBedroom);
         tvPlace=view.findViewById(R.id.textView6);tvCoin=view.findViewById(R.id.tvCoinBedroom);tvLvl=view.findViewById(R.id.tvLevelBedroom);
 
-        shade=view.findViewById(R.id.shadeBedroom);
-
+        if(HomeActivity.u.isAdult()){
+            imgChar.setImageResource(R.drawable.poubesar);
+        }else{
+            imgChar.setImageResource(R.drawable.poukecil);
+        }
         if(HomeActivity.u.isLampStatus()==true){
             imgLamp.setImageResource(R.drawable.lamp_on);
             //shade.setVisibility(View.INVISIBLE);
@@ -59,10 +62,11 @@ public class BedroomFragment extends Fragment {
             public void onClick(View view) {
                 if(HomeActivity.u.isLampStatus()==true){
                     HomeActivity.u.setLampStatus(false);
-                    imgLamp.setImageResource(R.drawable.lamp_off);//shade.setVisibility(View.VISIBLE);
+                    imgLamp.setImageResource(R.drawable.lamp_off);
+                    HomeActivity.u.setEnergy(HomeActivity.u.getEnergy()+10);
                 }else{
                     HomeActivity.u.setLampStatus(true);
-                    imgLamp.setImageResource(R.drawable.lamp_on);//shade.setVisibility(View.INVISIBLE);
+                    imgLamp.setImageResource(R.drawable.lamp_on);
                 }
             }
         });

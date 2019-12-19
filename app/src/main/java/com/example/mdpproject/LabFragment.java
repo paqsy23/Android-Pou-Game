@@ -17,12 +17,11 @@ import android.widget.TextView;
  * A simple {@link Fragment} subclass.
  */
 public class LabFragment extends Fragment {
-    ImageView imgChar,imgCamera,imgHelp,imgPrev,imgNext,imgCoin,imgLvl,imgEnergy,imgFullness,imgFun,imgHealth,imgShelf,imgPotion,imgShop;
+    ImageView imgChar,imgCamera,imgHelp,imgPrev,imgNext,imgCoin,imgLvl,imgEnergy,imgFullness,imgFun,imgHealth,imgShelf,imgPotion,imgShop,imgPrevPotion,imgNextPotion;
     TextView tvPlace,tvCoin,tvLvl;
     public LabFragment() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -41,10 +40,29 @@ public class LabFragment extends Fragment {
         imgNext=view.findViewById(R.id.imageNextLab);imgShelf=view.findViewById(R.id.imageShelfLab);
         imgCoin=view.findViewById(R.id.imageCoinLab);imgPotion=view.findViewById(R.id.imagePotionLab);
         imgLvl=view.findViewById(R.id.imageLevelLab);imgShop=view.findViewById(R.id.imageShopLab);
+        imgPrevPotion=view.findViewById(R.id.imagePrevPotionLab);imgNextPotion=view.findViewById(R.id.imageNextPotionLab);
 
         tvPlace=view.findViewById(R.id.textView6);tvCoin=view.findViewById(R.id.tvCoinLab);tvLvl=view.findViewById(R.id.tvLevelLab);
 
         tvCoin.setText(HomeActivity.u.getCoin()+"");tvLvl.setText(HomeActivity.u.getLvl()+"");
+        if(HomeActivity.u.isAdult()){
+            imgChar.setImageResource(R.drawable.poubesar);
+        }else{
+            imgChar.setImageResource(R.drawable.poukecil);
+        }
+        if(HomeActivity.u.getItems().isEmpty()){
+            imgPrevPotion.setVisibility(View.INVISIBLE);
+            imgNextPotion.setVisibility(View.INVISIBLE);
+            imgPotion.setVisibility(View.INVISIBLE);
+        }else if(HomeActivity.u.getItems().size()==1){
+            imgPrevPotion.setVisibility(View.INVISIBLE);
+            imgNextPotion.setVisibility(View.INVISIBLE);
+            imgPotion.setVisibility(View.VISIBLE);
+        }else{
+            imgPrevPotion.setVisibility(View.VISIBLE);
+            imgNextPotion.setVisibility(View.VISIBLE);
+            imgPotion.setVisibility(View.VISIBLE);
+        }
 
         imgPrev.setOnClickListener(new View.OnClickListener() {
             @Override

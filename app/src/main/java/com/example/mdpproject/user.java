@@ -12,6 +12,7 @@ public class user {
     public int fun;
     public boolean lampStatus;
     public boolean clean;
+    public boolean adult;
     ArrayList<item> items = new ArrayList<>();
 
     public user(int lvl, int xp, int coin, int energy, int health, int fullness, int fun, ArrayList<item> items) {
@@ -25,19 +26,7 @@ public class user {
         this.items = items;
         lampStatus=true;
         clean=true;
-    }
-
-    public user(user u) {
-        this.lvl = u.getLvl();
-        this.xp = u.getXp();
-        this.coin = u.getCoin();
-        this.energy = u.getEnergy();
-        this.health = u.getHealth();
-        this.fullness = u.getFullness();
-        this.fun = u.getFun();
-        this.items = u.getItems();
-        this.lampStatus=u.isLampStatus();
-        this.clean=u.isClean();
+        adult=false;
     }
 
     public int getLvl() {
@@ -46,6 +35,17 @@ public class user {
 
     public void setLvl(int lvl) {
         this.lvl = lvl;
+        if(this.lvl>=10){
+            this.setAdult(true);
+        }
+    }
+
+    public boolean isAdult() {
+        return adult;
+    }
+
+    public void setAdult(boolean adult) {
+        this.adult = adult;
     }
 
     public int getXp() {
@@ -55,8 +55,11 @@ public class user {
     public void setXp(int xp) {
         this.xp = xp;
         if(this.xp>=100){
-            this.lvl+=1;
-            this.xp-=100;
+            this.lvl+=this.xp/100;
+            this.xp-=100*this.xp/100;
+        }
+        if(this.lvl>=10){
+            this.setAdult(true);
         }
     }
 
