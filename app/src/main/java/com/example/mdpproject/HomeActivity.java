@@ -17,7 +17,7 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home2);
-        u = new user(0,0,0,100,100,100,100,itemUser);
+        u = new user(0,0,3000,100,100,100,100,itemUser);
         fragment = new BedroomFragment();
         openFragment(fragment);
 

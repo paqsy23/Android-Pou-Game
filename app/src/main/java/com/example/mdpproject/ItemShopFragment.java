@@ -37,8 +37,17 @@ public class ItemShopFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        rv=view.findViewById(R.id.rvShop);
-        adapter = new ItemAdapter(ShopFragment.listitem,HomeActivity.u);
+        rv=view.findViewById(R.id.rvItemShop);
+        adapter = new ItemAdapter(ShopFragment.listitem, HomeActivity.u, new ItemAdapter.onRecyclerClickListener() {
+            @Override
+            public void OnClickListener(View v, int pos, ArrayList<item> listitem) {
+                if(HomeActivity.u.getCoin()>=ShopFragment.listitem.get(pos).getPrice()){
+                    HomeActivity.itemUser.add(ShopFragment.listitem.get(pos));
+                    HomeActivity.u.setItems(HomeActivity.itemUser);
+                    HomeActivity.u.setCoin(HomeActivity.u.getCoin()-ShopFragment.listitem.get(pos).getPrice());
+                }
+            }
+        });
 
         rv.setHasFixedSize(true);
         rv.setLayoutManager(new LinearLayoutManager(getActivity()));

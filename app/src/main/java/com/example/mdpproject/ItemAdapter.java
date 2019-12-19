@@ -15,12 +15,16 @@ import java.util.ArrayList;
 public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder>  {
     public ArrayList<item> listitem;
     public user u;
+    onRecyclerClickListener onclick;
 
-    public ItemAdapter(ArrayList<item> listitem, user u) {
+    public ItemAdapter(ArrayList<item> listitem, user u,onRecyclerClickListener onclick) {
         this.listitem = listitem;
         this.u = u;
+        this.onclick=onclick;
     }
-
+    public interface onRecyclerClickListener{
+        public void OnClickListener(View v, int pos, ArrayList<item> listitem);
+    }
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -49,6 +53,14 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder>  {
             imgItem=itemView.findViewById(R.id.imageItem);
             tvItemName=itemView.findViewById(R.id.tvItemName);
             tvItemPrice=itemView.findViewById(R.id.tvPrice);
+            btnBuy=itemView.findViewById(R.id.btnBuy);
+
+            btnBuy.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    onclick.OnClickListener(view,ViewHolder.this.getLayoutPosition(),listitem);
+                }
+            });
         }
 
         void bind(item i){
@@ -56,67 +68,117 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder>  {
                 if(i.getName().equals("food_bacon")){
                     imgItem.setImageResource(R.drawable.food_bacon);
                     tvItemName.setText(i.getName());
-                    tvItemPrice.setText(i.getPrice());
+                    tvItemPrice.setText(i.getPrice()+"");
                 }else if(i.getName().equals("food_bread_chocolate")){
                     imgItem.setImageResource(R.drawable.food_bread_chocolate);
+                    tvItemName.setText(i.getName());
+                    tvItemPrice.setText(i.getPrice()+"");
                 }else if(i.getName().equals("food_cereal_chocolate")){
                     imgItem.setImageResource(R.drawable.food_cereal_chocolate);
+                    tvItemName.setText(i.getName());
+                    tvItemPrice.setText(i.getPrice()+"");
                 }else if(i.getName().equals("food_croissant_cheese")){
                     imgItem.setImageResource(R.drawable.food_croissant_cheese);
+                    tvItemName.setText(i.getName());
+                    tvItemPrice.setText(i.getPrice()+"");
                 }else if(i.getName().equals("food_croissant_chocolate")) {
                     imgItem.setImageResource(R.drawable.food_croissant_chocolate);
+                    tvItemName.setText(i.getName());
+                    tvItemPrice.setText(i.getPrice()+"");
                 }
             }else if(i.getType().equals("Potion")){
                 if(i.getName().equals("potions_adult")){
                     imgItem.setImageResource(R.drawable.potions_adult);
+                    tvItemName.setText(i.getName());
+                    tvItemPrice.setText(i.getPrice()+"");
                 }else if(i.getName().equals("potions_all_max")){
                     imgItem.setImageResource(R.drawable.potions_all_max);
+                    tvItemName.setText(i.getName());
+                    tvItemPrice.setText(i.getPrice()+"");
                 }else if(i.getName().equals("potions_baby")){
                     imgItem.setImageResource(R.drawable.potions_baby);
+                    tvItemName.setText(i.getName());
+                    tvItemPrice.setText(i.getPrice()+"");
                 }else if(i.getName().equals("potions_energizer")){
                     imgItem.setImageResource(R.drawable.potions_energizer);
+                    tvItemName.setText(i.getName());
+                    tvItemPrice.setText(i.getPrice()+"");
                 }else if(i.getName().equals("potions_fat_burner")){
                     imgItem.setImageResource(R.drawable.potions_fat_burner);
+                    tvItemName.setText(i.getName());
+                    tvItemPrice.setText(i.getPrice()+"");
                 }else if(i.getName().equals("potions_health_big")){
                     imgItem.setImageResource(R.drawable.potions_health_big);
+                    tvItemName.setText(i.getName());
+                    tvItemPrice.setText(i.getPrice()+"");
                 }else if(i.getName().equals("potions_health_small")){
                     imgItem.setImageResource(R.drawable.potions_health_small);
+                    tvItemName.setText(i.getName());
+                    tvItemPrice.setText(i.getPrice()+"");
                 }else if(i.getName().equals("potions_hunger")){
                     imgItem.setImageResource(R.drawable.potions_hunger);
+                    tvItemName.setText(i.getName());
+                    tvItemPrice.setText(i.getPrice()+"");
                 }
             }else if(i.getType().equals("Shower")){
                 if(i.getName().equals("Shower_black")){
                     imgItem.setImageResource(R.drawable.shower_black);
+                    tvItemName.setText(i.getName());
+                    tvItemPrice.setText(i.getPrice()+"");
                 }
                 else if(i.getName().equals("Shower_red")){
                     imgItem.setImageResource(R.drawable.shower_red);
+                    tvItemName.setText(i.getName());
+                    tvItemPrice.setText(i.getPrice()+"");
                 }else if(i.getName().equals("Shower_brown")){
                     imgItem.setImageResource(R.drawable.shower_brown);
+                    tvItemName.setText(i.getName());
+                    tvItemPrice.setText(i.getPrice()+"");
                 }else if(i.getName().equals("Shower_pink")){
                     imgItem.setImageResource(R.drawable.shower_pink);
+                    tvItemName.setText(i.getName());
+                    tvItemPrice.setText(i.getPrice()+"");
                 }
             }else if(i.getType().equals("Soap")){
                 if(i.getName().equals("soap_red")){
                     imgItem.setImageResource(R.drawable.soap_red);
+                    tvItemName.setText(i.getName());
+                    tvItemPrice.setText(i.getPrice()+"");
                 }
             }else if(i.getType().equals("Ball")){
                 if(i.getName().equals("ball_beach1")){
                     imgItem.setImageResource(R.drawable.ball_beach1);
+                    tvItemName.setText(i.getName());
+                    tvItemPrice.setText(i.getPrice()+"");
                 }
                 else if(i.getName().equals("ball_beach2")){
                     imgItem.setImageResource(R.drawable.ball_beach2);
+                    tvItemName.setText(i.getName());
+                    tvItemPrice.setText(i.getPrice()+"");
                 }else if(i.getName().equals("ball_beach3")){
                     imgItem.setImageResource(R.drawable.ball_beach3);
+                    tvItemName.setText(i.getName());
+                    tvItemPrice.setText(i.getPrice()+"");
                 }else if(i.getName().equals("ball_beach4")){
                     imgItem.setImageResource(R.drawable.ball_beach4);
+                    tvItemName.setText(i.getName());
+                    tvItemPrice.setText(i.getPrice()+"");
                 }else if(i.getName().equals("ball_beach5")){
                     imgItem.setImageResource(R.drawable.ball_beach5);
+                    tvItemName.setText(i.getName());
+                    tvItemPrice.setText(i.getPrice()+"");
                 }else if(i.getName().equals("ball_beach6")){
                     imgItem.setImageResource(R.drawable.ball_beach6);
+                    tvItemName.setText(i.getName());
+                    tvItemPrice.setText(i.getPrice()+"");
                 }else if(i.getName().equals("ball_beach7")){
                     imgItem.setImageResource(R.drawable.ball_beach7);
+                    tvItemName.setText(i.getName());
+                    tvItemPrice.setText(i.getPrice()+"");
                 }else if(i.getName().equals("ball_beach8")){
                     imgItem.setImageResource(R.drawable.ball_beach8);
+                    tvItemName.setText(i.getName());
+                    tvItemPrice.setText(i.getPrice()+"");
                 }
             }
         }
