@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
-    android:backgroundTint="#80000000">
+    tools:context=".ItemUserFragment">
 
     <RelativeLayout
         android:id="@+id/navLayout"
@@ -49,6 +48,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/navLayout"
-        tools:listitem="@layout/rv_item_shop" />
+        tools:listitem="@layout/rv_item" />
 
 </RelativeLayout>

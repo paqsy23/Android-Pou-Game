@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import java.util.ArrayList;
 
@@ -23,6 +24,7 @@ import java.util.ArrayList;
 public class ItemShopFragment extends Fragment {
     RecyclerView rv;
     ItemAdapter adapter;
+    ImageView imgBack,imgClose;
     public ItemShopFragment() {
         // Required empty public constructor
     }
@@ -38,6 +40,23 @@ public class ItemShopFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         rv=view.findViewById(R.id.rvItemShop);
+        imgBack=view.findViewById(R.id.imageBack);
+        imgClose=view.findViewById(R.id.imageCloseShop);
+        imgBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                tutupShop();
+            }
+        });
+
+        imgClose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                gantiPage(HomeActivity.pages);
+            }
+        });
+
+        imgClose=view.findViewById(R.id.imageCloseShop);
         adapter = new ItemAdapter(ShopFragment.listitem, HomeActivity.u, new ItemAdapter.onRecyclerClickListener() {
             @Override
             public void OnClickListener(View v, int pos, ArrayList<item> listitem) {
@@ -52,5 +71,33 @@ public class ItemShopFragment extends Fragment {
         rv.setHasFixedSize(true);
         rv.setLayoutManager(new LinearLayoutManager(getActivity()));
         rv.setAdapter(adapter);
+    }
+
+    public void tutupShop(){
+        getFragmentManager().beginTransaction().remove(this).commit();
+    }
+    public void gantiPage(int angka){
+        if(angka==0){
+            getFragmentManager().beginTransaction().remove(this).commit();
+            getFragmentManager().beginTransaction().replace(R.id.myFragment, new BedroomFragment()).addToBackStack(null).commit();
+        }else if(angka==1){
+            getFragmentManager().beginTransaction().remove(this).commit();
+            getFragmentManager().beginTransaction().replace(R.id.myFragment, new EatFragment()).addToBackStack(null).commit();
+        }else if(angka==2){
+            getFragmentManager().beginTransaction().remove(this).commit();
+            getFragmentManager().beginTransaction().replace(R.id.myFragment, new BathroomFragment()).addToBackStack(null).commit();
+        }else if(angka==3){
+            getFragmentManager().beginTransaction().remove(this).commit();
+            getFragmentManager().beginTransaction().replace(R.id.myFragment, new LabFragment()).addToBackStack(null).commit();
+        }else if(angka==4){
+            getFragmentManager().beginTransaction().remove(this).commit();
+            getFragmentManager().beginTransaction().replace(R.id.myFragment, new GameroomFragment()).addToBackStack(null).commit();
+        }else if(angka>4){
+            angka=0;
+            gantiPage(HomeActivity.pages);
+        }else if(angka<0){
+            angka=4;
+            gantiPage(HomeActivity.pages);
+        }
     }
 }
