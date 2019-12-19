@@ -181,6 +181,31 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:src="@drawable/fun" />
+                <TextView
+                    android:id="@+id/tvFullnessBedroom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@id/imageFullnessBedroom"
+                    android:layout_alignBottom="@id/imageFullnessBedroom"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:text="0%"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/tvFunBedroom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@id/imageFunBedroom"
+                    android:layout_alignBottom="@id/imageFunBedroom"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:text="0%"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp" />
             </RelativeLayout>
 
             <ImageView
@@ -189,6 +214,31 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:src="@drawable/health" />
+            <TextView
+                android:id="@+id/tvEnergyBedroom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@id/imageEnergyBedroom"
+                android:layout_alignBottom="@id/imageEnergyBedroom"
+                android:layout_marginStart="4dp"
+                android:layout_marginBottom="4dp"
+                android:text="0%"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="@android:color/white"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/tvHealthBedroom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@id/imageHealthBedroom"
+                android:layout_alignBottom="@id/imageHealthBedroom"
+                android:layout_marginStart="4dp"
+                android:layout_marginBottom="4dp"
+                android:text="0%"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="@android:color/white"
+                android:textSize="24sp" />
         </RelativeLayout>
 
     </RelativeLayout>
