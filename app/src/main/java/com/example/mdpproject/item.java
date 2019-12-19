@@ -1,23 +1,13 @@
 package com.example.mdpproject;
 
 public class item {
-    //ll
-    public int image;
     public int price;
     public String name;
-
-    public item(int image, int price, String name) {
-        this.image = image;
+    public String type;
+    public item(int price, String name,String type) {
         this.price = price;
         this.name = name;
-    }
-
-    public int getImage() {
-        return image;
-    }
-
-    public void setImage(int image) {
-        this.image = image;
+        this.type = type;
     }
 
     public int getPrice() {
@@ -35,4 +25,13 @@ public class item {
     public void setName(String name) {
         this.name = name;
     }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
 }
+

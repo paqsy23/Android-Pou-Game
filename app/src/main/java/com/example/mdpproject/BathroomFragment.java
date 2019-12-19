@@ -20,10 +20,10 @@ public class BathroomFragment extends Fragment {
     ImageView imgChar,imgCamera,imgHelp,imgPrev,imgNext,imgCoin,imgLvl,imgEnergy,imgFullness,imgFun,imgHealth,imgShower,imgSoap,imgShop;
     TextView tvPlace,tvCoin,tvLvl;
     user u;
+    public boolean sabun=false;
     public BathroomFragment() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -44,8 +44,12 @@ public class BathroomFragment extends Fragment {
 
         tvPlace=view.findViewById(R.id.textView6);tvCoin=view.findViewById(R.id.tvCoinBathroom);tvLvl=view.findViewById(R.id.tvLevelBathroom);
 
-        tvCoin.setText(BedroomFragment.u.getCoin()+"");tvLvl.setText(BedroomFragment.u.getLvl()+"");
-
+        tvCoin.setText(HomeActivity.u.getCoin()+"");tvLvl.setText(HomeActivity.u.getLvl()+"");
+        if(HomeActivity.u.isAdult()){
+            imgChar.setImageResource(R.drawable.poubesar);
+        }else{
+            imgChar.setImageResource(R.drawable.poukecil);
+        }
         imgPrev.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -68,7 +72,24 @@ public class BathroomFragment extends Fragment {
                 getFragmentManager().beginTransaction().replace(R.id.myFragment, new ShopFragment()).addToBackStack(null).commit();
             }
         });
+        imgSoap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(HomeActivity.u.isClean()==false){
+                    sabun=true;
+                }
+            }
+        });
 
+        imgShower.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(HomeActivity.u.isClean()==false && sabun==true){
+                    sabun=false;
+                    u.setClean(true);
+                }
+            }
+        });
     }
 
     public void gantiPage(int angka){

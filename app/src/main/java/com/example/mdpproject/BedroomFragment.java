@@ -22,8 +22,6 @@ public class BedroomFragment extends Fragment {
     TextView tvPlace,tvCoin,tvLvl;
     View shade;
 
-    public static user u;
-
     public BedroomFragment() {
         // Required empty public constructor
     }
@@ -46,11 +44,12 @@ public class BedroomFragment extends Fragment {
         imgLvl=view.findViewById(R.id.imageLevelBedroom);imgShop=view.findViewById(R.id.imageShopBedroom);
         tvPlace=view.findViewById(R.id.textView6);tvCoin=view.findViewById(R.id.tvCoinBedroom);tvLvl=view.findViewById(R.id.tvLevelBedroom);
 
-        shade=view.findViewById(R.id.shadeBedroom);
-
-        u = new user(0,0,0,100,100,100,100,null);
-
-        if(u.isLampStatus()==true){
+        if(HomeActivity.u.isAdult()){
+            imgChar.setImageResource(R.drawable.poubesar);
+        }else{
+            imgChar.setImageResource(R.drawable.poukecil);
+        }
+        if(HomeActivity.u.isLampStatus()==true){
             imgLamp.setImageResource(R.drawable.lamp_on);
             //shade.setVisibility(View.INVISIBLE);
         }else{
@@ -61,17 +60,18 @@ public class BedroomFragment extends Fragment {
         imgLamp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(u.isLampStatus()==true){
-                    u.setLampStatus(false);
-                    imgLamp.setImageResource(R.drawable.lamp_off);//shade.setVisibility(View.VISIBLE);
+                if(HomeActivity.u.isLampStatus()==true){
+                    HomeActivity.u.setLampStatus(false);
+                    imgLamp.setImageResource(R.drawable.lamp_off);
+                    HomeActivity.u.setEnergy(HomeActivity.u.getEnergy()+10);
                 }else{
-                    u.setLampStatus(true);
-                    imgLamp.setImageResource(R.drawable.lamp_on);//shade.setVisibility(View.INVISIBLE);
+                    HomeActivity.u.setLampStatus(true);
+                    imgLamp.setImageResource(R.drawable.lamp_on);
                 }
             }
         });
 
-        tvCoin.setText(u.getCoin()+"");tvLvl.setText(u.getLvl()+"");
+        tvCoin.setText(HomeActivity.u.getCoin()+"");tvLvl.setText(HomeActivity.u.getLvl()+"");
 
         imgPrev.setOnClickListener(new View.OnClickListener() {
             @Override

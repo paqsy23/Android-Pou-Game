@@ -47,8 +47,26 @@ public class EatFragment extends Fragment {
         imgPrevFood=view.findViewById(R.id.imagePrevFoodEat);imgFood=view.findViewById(R.id.imageFoodEat);
 
         tvPlace=view.findViewById(R.id.textView6);tvCoin=view.findViewById(R.id.tvCoinEat);tvLvl=view.findViewById(R.id.tvLevelEat);
+        if(HomeActivity.u.isAdult()){
+            imgChar.setImageResource(R.drawable.poubesar);
+        }else{
+            imgChar.setImageResource(R.drawable.poukecil);
+        }
+        if(HomeActivity.u.getItems().isEmpty()){
+            imgPrevFood.setVisibility(View.INVISIBLE);
+            imgNextFood.setVisibility(View.INVISIBLE);
+            imgFood.setVisibility(View.INVISIBLE);
+        }else if(HomeActivity.u.getItems().size()==1){
+            imgPrevFood.setVisibility(View.INVISIBLE);
+            imgNextFood.setVisibility(View.INVISIBLE);
+            imgFood.setVisibility(View.VISIBLE);
+        }else{
+            imgPrevFood.setVisibility(View.VISIBLE);
+            imgNextFood.setVisibility(View.VISIBLE);
+            imgFood.setVisibility(View.VISIBLE);
+        }
 
-        tvCoin.setText(BedroomFragment.u.getCoin()+"");tvLvl.setText(BedroomFragment.u.getLvl()+"");
+        tvCoin.setText(HomeActivity.u.getCoin()+"");tvLvl.setText(HomeActivity.u.getLvl()+"");
 
         imgPrev.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,7 +90,6 @@ public class EatFragment extends Fragment {
                 getFragmentManager().beginTransaction().replace(R.id.myFragment, new ShopFragment()).addToBackStack(null).commit();
             }
         });
-
     }
 
     public void gantiPage(int angka){
