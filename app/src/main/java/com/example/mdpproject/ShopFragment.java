@@ -72,6 +72,37 @@ public class ShopFragment extends Fragment {
             public void onClick(View view) {
                 listitem.clear();
                 listitem.add(new item(300,"soap_red","Soap"));
+                bukaShop();
+            }
+        });
+        imgPotion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                listitem.clear();
+                listitem.add(new item(300,"potions_adult","Potion"));
+                listitem.add(new item(300,"potions_all_max","Potion"));
+                listitem.add(new item(300,"potions_baby","Potion"));
+                listitem.add(new item(300,"potions_energizer","Potion"));
+                listitem.add(new item(300,"potions_fat_burner","Potion"));
+                listitem.add(new item(300,"potions_health_big","Potion"));
+                listitem.add(new item(300,"potions_healt_small","Potion"));
+                listitem.add(new item(300,"potions_hunger","Potion"));
+                bukaShop();
+            }
+        });
+        imgBalls.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                listitem.clear();
+                listitem.add(new item(300,"ball_beach1","Ball"));
+                listitem.add(new item(300,"ball_beach2","Ball"));
+                listitem.add(new item(300,"ball_beach3","Ball"));
+                listitem.add(new item(300,"ball_beach4","Ball"));
+                listitem.add(new item(300,"ball_beach5","Ball"));
+                listitem.add(new item(300,"ball_beach6","Ball"));
+                listitem.add(new item(300,"ball_beach7","Ball"));
+                listitem.add(new item(300,"ball_beach8","Ball"));
+                bukaShop();
             }
         });
 

@@ -20,7 +20,6 @@ public class GameroomFragment extends Fragment {
 
     ImageView imgChar,imgCamera,imgHelp,imgPrev,imgNext,imgCoin,imgLvl,imgEnergy,imgFullness,imgFun,imgHealth,imgJoystick,imgBall,imgShop;
     TextView tvPlace,tvCoin,tvLvl;
-    user u;
     public GameroomFragment() {
         // Required empty public constructor
     }
@@ -47,7 +46,11 @@ public class GameroomFragment extends Fragment {
         tvPlace=view.findViewById(R.id.textView6);tvCoin=view.findViewById(R.id.tvCoinGame);tvLvl=view.findViewById(R.id.tvLevelGame);
 
         tvCoin.setText(HomeActivity.u.getCoin()+"");tvLvl.setText(HomeActivity.u.getLvl()+"");
-
+        if(HomeActivity.u.isAdult()){
+            imgChar.setImageResource(R.drawable.poubesar);
+        }else{
+            imgChar.setImageResource(R.drawable.poukecil);
+        }
         imgPrev.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -73,7 +76,14 @@ public class GameroomFragment extends Fragment {
         imgBall.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                u.setFun(u.getFun()+10);
+                HomeActivity.u.setFun(HomeActivity.u.getFun()+10);
+                HomeActivity.u.setXp(HomeActivity.u.getXp()+1000);
+                tvLvl.setText(HomeActivity.u.getLvl()+"");
+                if(HomeActivity.u.isAdult()){
+                    imgChar.setImageResource(R.drawable.poubesar);
+                }else{
+                    imgChar.setImageResource(R.drawable.poukecil);
+                }
             }
         });
     }

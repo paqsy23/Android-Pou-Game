@@ -45,7 +45,11 @@ public class BathroomFragment extends Fragment {
         tvPlace=view.findViewById(R.id.textView6);tvCoin=view.findViewById(R.id.tvCoinBathroom);tvLvl=view.findViewById(R.id.tvLevelBathroom);
 
         tvCoin.setText(HomeActivity.u.getCoin()+"");tvLvl.setText(HomeActivity.u.getLvl()+"");
-
+        if(HomeActivity.u.isAdult()){
+            imgChar.setImageResource(R.drawable.poubesar);
+        }else{
+            imgChar.setImageResource(R.drawable.poukecil);
+        }
         imgPrev.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -71,7 +75,7 @@ public class BathroomFragment extends Fragment {
         imgSoap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(u.isClean()==false){
+                if(HomeActivity.u.isClean()==false){
                     sabun=true;
                 }
             }
@@ -80,7 +84,7 @@ public class BathroomFragment extends Fragment {
         imgShower.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(u.isClean()==false && sabun==true){
+                if(HomeActivity.u.isClean()==false && sabun==true){
                     sabun=false;
                     u.setClean(true);
                 }

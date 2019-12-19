@@ -61,22 +61,22 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder>  {
                 }else if(i.getName().equals("food_croissant_chocolate")) {
                     imgItem.setImageResource(R.drawable.food_croissant_chocolate);
                 }
-            }else if(i.getType().equals("Potions")){
-                if(i.getName().equals("PotionsAdult")){
+            }else if(i.getType().equals("Potion")){
+                if(i.getName().equals("potions_adult")){
                     imgItem.setImageResource(R.drawable.potions_adult);
-                }else if(i.getName().equals("PotionsAllMax")){
+                }else if(i.getName().equals("potions_all_max")){
                     imgItem.setImageResource(R.drawable.potions_all_max);
-                }else if(i.getName().equals("PotionsBaby")){
+                }else if(i.getName().equals("potions_baby")){
                     imgItem.setImageResource(R.drawable.potions_baby);
-                }else if(i.getName().equals("PotionsEnergizer")){
+                }else if(i.getName().equals("potions_energizer")){
                     imgItem.setImageResource(R.drawable.potions_energizer);
-                }else if(i.getName().equals("PotionsFatBurner")){
+                }else if(i.getName().equals("potions_fat_burner")){
                     imgItem.setImageResource(R.drawable.potions_fat_burner);
-                }else if(i.getName().equals("PotionsHealthBig")){
+                }else if(i.getName().equals("potions_health_big")){
                     imgItem.setImageResource(R.drawable.potions_health_big);
-                }else if(i.getName().equals("PotionsHealthSmall")){
+                }else if(i.getName().equals("potions_health_small")){
                     imgItem.setImageResource(R.drawable.potions_health_small);
-                }else if(i.getName().equals("PotionsHunger")){
+                }else if(i.getName().equals("potions_hunger")){
                     imgItem.setImageResource(R.drawable.potions_hunger);
                 }
             }else if(i.getType().equals("Shower")){
@@ -90,12 +90,29 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder>  {
                 }else if(i.getName().equals("Shower_pink")){
                     imgItem.setImageResource(R.drawable.shower_pink);
                 }
-            }else if(i.getType().equals("Soaps")){
-                if(i.getName().equals("Soap_red")){
+            }else if(i.getType().equals("Soap")){
+                if(i.getName().equals("soap_red")){
                     imgItem.setImageResource(R.drawable.soap_red);
                 }
-            }else if(i.getType().equals("Balls")){
-
+            }else if(i.getType().equals("Ball")){
+                if(i.getName().equals("ball_beach1")){
+                    imgItem.setImageResource(R.drawable.ball_beach1);
+                }
+                else if(i.getName().equals("ball_beach2")){
+                    imgItem.setImageResource(R.drawable.ball_beach2);
+                }else if(i.getName().equals("ball_beach3")){
+                    imgItem.setImageResource(R.drawable.ball_beach3);
+                }else if(i.getName().equals("ball_beach4")){
+                    imgItem.setImageResource(R.drawable.ball_beach4);
+                }else if(i.getName().equals("ball_beach5")){
+                    imgItem.setImageResource(R.drawable.ball_beach5);
+                }else if(i.getName().equals("ball_beach6")){
+                    imgItem.setImageResource(R.drawable.ball_beach6);
+                }else if(i.getName().equals("ball_beach7")){
+                    imgItem.setImageResource(R.drawable.ball_beach7);
+                }else if(i.getName().equals("ball_beach8")){
+                    imgItem.setImageResource(R.drawable.ball_beach8);
+                }
             }
         }
     }
