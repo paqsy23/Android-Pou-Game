@@ -1,6 +1,7 @@
 package com.example.mdpproject;
 
 public class item {
+    //ll
     public int image;
     public int price;
     public String name;
