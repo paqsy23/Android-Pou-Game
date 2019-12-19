@@ -54,6 +54,10 @@ public class user {
 
     public void setXp(int xp) {
         this.xp = xp;
+        if(this.xp>=100){
+            this.lvl+=1;
+            this.xp-=100;
+        }
     }
 
     public int getCoin() {
@@ -68,9 +72,7 @@ public class user {
         return clean;
     }
 
-    public void setClean(boolean clean) {
-        this.clean = clean;
-    }
+    public void setClean(boolean clean) {this.clean = clean;}
 
     public int getEnergy() {
         return energy;
@@ -78,6 +80,9 @@ public class user {
 
     public void setEnergy(int energy) {
         this.energy = energy;
+        if(this.energy>100){
+            this.energy=100;
+        }
     }
 
     public int getHealth() {
@@ -86,6 +91,9 @@ public class user {
 
     public void setHealth(int health) {
         this.health = health;
+        if(this.health>100){
+            this.health=100;
+        }
     }
 
     public int getFullness() {
@@ -94,6 +102,9 @@ public class user {
 
     public void setFullness(int fullness) {
         this.fullness = fullness;
+        if(this.fullness>100){
+            this.fullness=100;
+        }
     }
 
     public int getFun() {
@@ -102,6 +113,9 @@ public class user {
 
     public void setFun(int fun) {
         this.fun = fun;
+        if(this.fun>100){
+            this.fun=100;
+        }
     }
 
 

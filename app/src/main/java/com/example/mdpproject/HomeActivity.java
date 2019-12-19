@@ -18,6 +18,7 @@ public class HomeActivity extends AppCompatActivity {
         openFragment(fragment);
 
     }
+
     private void openFragment(Fragment fr){
         FragmentTransaction ft = getSupportFragmentManager()
                 .beginTransaction();

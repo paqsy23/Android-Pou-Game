@@ -20,10 +20,10 @@ public class BathroomFragment extends Fragment {
     ImageView imgChar,imgCamera,imgHelp,imgPrev,imgNext,imgCoin,imgLvl,imgEnergy,imgFullness,imgFun,imgHealth,imgShower,imgSoap,imgShop;
     TextView tvPlace,tvCoin,tvLvl;
     user u;
+    public boolean sabun=false;
     public BathroomFragment() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -68,7 +68,24 @@ public class BathroomFragment extends Fragment {
                 getFragmentManager().beginTransaction().replace(R.id.myFragment, new ShopFragment()).addToBackStack(null).commit();
             }
         });
+        imgSoap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(u.isClean()==false){
+                    sabun=true;
+                }
+            }
+        });
 
+        imgShower.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(u.isClean()==false && sabun==true){
+                    sabun=false;
+                    u.setClean(true);
+                }
+            }
+        });
     }
 
     public void gantiPage(int angka){

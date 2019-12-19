@@ -70,6 +70,12 @@ public class GameroomFragment extends Fragment {
                 getFragmentManager().beginTransaction().replace(R.id.myFragment, new ShopFragment()).addToBackStack(null).commit();
             }
         });
+        imgBall.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                u.setFun(u.getFun()+10);
+            }
+        });
     }
 
     public void gantiPage(int angka){
