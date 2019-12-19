@@ -15,7 +15,7 @@
         android:layout_width="150dip"
         android:layout_height="150dip"
         android:layout_centerInParent="true"
-        android:src="@drawable/poukecil" />
+        android:src="@drawable/icon100" />
 
     <RelativeLayout
         android:id="@+id/navLayout"
@@ -175,6 +175,31 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:src="@drawable/fun" />
+                <TextView
+                    android:id="@+id/tvFullnessEat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@id/imageFullnessEat"
+                    android:layout_alignBottom="@id/imageFullnessEat"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:text="0%"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/tvFunEat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@id/imageFunEat"
+                    android:layout_alignBottom="@id/imageFunEat"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:text="0%"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp" />
             </RelativeLayout>
 
             <ImageView
@@ -183,6 +208,32 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:src="@drawable/health" />
+
+            <TextView
+                android:id="@+id/tvEnergyEat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@id/imageEnergyEat"
+                android:layout_alignBottom="@id/imageEnergyEat"
+                android:layout_marginStart="4dp"
+                android:layout_marginBottom="4dp"
+                android:text="0%"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="@android:color/white"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/tvHealthEat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@id/imageHealthEat"
+                android:layout_alignBottom="@id/imageHealthEat"
+                android:layout_marginStart="4dp"
+                android:layout_marginBottom="4dp"
+                android:text="0%"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="@android:color/white"
+                android:textSize="24sp" />
         </RelativeLayout>
 
     </RelativeLayout>

@@ -15,7 +15,7 @@
         android:layout_width="150dip"
         android:layout_height="150dip"
         android:layout_centerInParent="true"
-        android:src="@drawable/poukecil" />
+        android:src="@drawable/icon100" />
 
     <RelativeLayout
         android:id="@+id/navLayout"
@@ -175,6 +175,31 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:src="@drawable/fun" />
+                <TextView
+                    android:id="@+id/tvFullnessGame"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@id/imageFullnessGame"
+                    android:layout_alignBottom="@id/imageFullnessGame"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:text="0%"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/tvFunGame"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@id/imageFunGame"
+                    android:layout_alignBottom="@id/imageFunGame"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:text="0%"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp" />
             </RelativeLayout>
 
             <ImageView
@@ -183,6 +208,31 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:src="@drawable/health" />
+            <TextView
+                android:id="@+id/tvEnergyGame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@id/imageEnergyGame"
+                android:layout_alignBottom="@id/imageEnergyGame"
+                android:layout_marginStart="4dp"
+                android:layout_marginBottom="4dp"
+                android:text="0%"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="@android:color/white"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/tvHealthGame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@id/imageHealthGame"
+                android:layout_alignBottom="@id/imageHealthGame"
+                android:layout_marginStart="4dp"
+                android:layout_marginBottom="4dp"
+                android:text="0%"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="@android:color/white"
+                android:textSize="24sp" />
         </RelativeLayout>
 
     </RelativeLayout>

@@ -15,7 +15,7 @@
         android:layout_width="150dip"
         android:layout_height="150dip"
         android:layout_centerInParent="true"
-        android:src="@drawable/poukecil" />
+        android:src="@drawable/icon100" />
 
     <RelativeLayout
         android:id="@+id/navLayout"
@@ -175,6 +175,31 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:src="@drawable/fun" />
+                <TextView
+                    android:id="@+id/tvFullnessBathRoom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@id/imageFullnessBathroom"
+                    android:layout_alignBottom="@id/imageFullnessBathroom"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:text="0%"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/tvFunBathroom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@id/imageFunBathroom"
+                    android:layout_alignBottom="@id/imageFunBathroom"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:text="0%"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp" />
             </RelativeLayout>
 
             <ImageView
@@ -183,6 +208,31 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:src="@drawable/health" />
+            <TextView
+                android:id="@+id/tvEnergyBathroom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@id/imageEnergyBathroom"
+                android:layout_alignBottom="@id/imageEnergyBathroom"
+                android:layout_marginStart="4dp"
+                android:layout_marginBottom="4dp"
+                android:text="0%"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="@android:color/white"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/tvHealthBathroom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@id/imageHealthBathroom"
+                android:layout_alignBottom="@id/imageHealthBathroom"
+                android:layout_marginStart="4dp"
+                android:layout_marginBottom="4dp"
+                android:text="0%"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="@android:color/white"
+                android:textSize="24sp" />
         </RelativeLayout>
 
     </RelativeLayout>
