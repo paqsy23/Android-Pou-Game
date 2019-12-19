@@ -58,7 +58,7 @@ public class register extends AppCompatActivity {
         db = new SQLHandler(getApplicationContext());
     }
     private void registerUser(final String mail, final String pass, final String username){
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://192.168.43.137/mdpproject/mdpproject.php", new Response.Listener<String>() {
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://10.10.9.213/mdpproject/mdpproject.php", new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 try {
